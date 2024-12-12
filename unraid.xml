@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Mp3tag</Name>
+  <Repository>ghcr.io/shooftie/docker-mp3tag:main</Repository>
+  <Registry>https://github.com/users/shooftie/packages/container/docker-mp3tag</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/shooftie/docker-mp3tag/main/unraid.xml</TemplateURL>
+  <Icon>https://www.mp3tag.de/images/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1733960277</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port: 3000" Target="3000" Default="3000" Mode="tcp" Description="Mp3tag desktop gui" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Port: 3001" Target="3001" Default="3001" Mode="tcp" Description="Mp3tag desktop gui HTTPS" Type="Port" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/mp3tag" Mode="rw" Description="Users home directory in the container" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>
