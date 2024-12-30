@@ -21,9 +21,10 @@
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Port: 3000" Target="3000" Default="3000" Mode="tcp" Description="Mp3tag desktop gui" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Port: 3001" Target="3001" Default="3001" Mode="tcp" Description="Mp3tag desktop gui HTTPS" Type="Port" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/mp3tag" Mode="rw" Description="Users home directory in the container" Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Port: 3000" Target="3000" Default="3000" Mode="tcp" Description="Mp3tag desktop gui" Type="Port" Display="always" Required="false" Mask="false">13223</Config>
+  <Config Name="Port: 3001" Target="3001" Default="3001" Mode="tcp" Description="Mp3tag desktop gui HTTPS" Type="Port" Display="always" Required="false" Mask="false">13224</Config>
+  <Config Name="Path: data" Target="/mnt/data" Default="/mnt/data" Mode="rw,slave" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/media</Config>
+  <Config Name="Path: appdata" Target="/config" Default="/mnt/user/appdata/mp3tag" Mode="rw" Description="Users home directory in the container" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/mp3tag</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
