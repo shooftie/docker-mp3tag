@@ -16,7 +16,7 @@ ARG mp3tag_script_path="${mp3tag_script_dir}/${mp3tag_script}"
 # Install Wine sources
 RUN \
   dpkg --add-architecture i386 && \
-  mkdir -pm755 /etc/apt/keyrings && \
+  mkdir -p -m 755 /etc/apt/keyrings && \
   curl \
     -o /etc/apt/keyrings/winehq-archive.key \
     https://dl.winehq.org/wine-builds/winehq.key && \
@@ -60,6 +60,10 @@ RUN chmod 755 ${mp3tag_script_path}
 # Install Picard
 RUN \
   apt-get install -y picard
+
+# Install Picard
+RUN \
+  apt-get install -y firefox
 
 # Cleanup
 RUN \
