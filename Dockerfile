@@ -61,9 +61,6 @@ RUN chmod 755 ${mp3tag_script_path}
 RUN \
   apt-get install -y picard
 
-# Install Firefox
-# TODO
-
 # Cleanup
 RUN \
   apt-get autoclean && \
